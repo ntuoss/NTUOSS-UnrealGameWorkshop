@@ -904,3 +904,17 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2019.10.09-08.04.50:165][548]LogPlayLevel: Display: Destroying online subsystem :Context_4
 [2019.10.09-08.05.06:615][656]LogSlate: Took 0.000168 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
 [2019.10.09-08.12.06:949][914]LogSlate: FSceneViewport::OnFocusLost() reason 5
+[2019.10.09-08.30.21:530][362]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2019.10.09-08.30.21:531][362]LogWindowsTextInputMethodSystem: Display: IME system now activated using TSF (Microsoft Pinyin).
+[2019.10.09-09.00.07:241][ 56]LogHttp: Warning: 000001FB44CFAE80: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BE630C242-498F-AACE-6FB9-C88EFCB0A53D%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.23.0-8386587%2B%2B%2BUE4%2BRelease-4.23&UserID=2cfdf9b54a5d0ba7d1b0dfa0f26a02ab%7C94b6133059dd439db8a3b2c1d6c74977%7C7a99eef1-b59a-4a99-83fc-5296cfc9909c&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: -1, actual payload size: 0
+[2019.10.09-09.00.07:241][ 56]LogHttp: Warning: 000001FB44CFAE80: request failed, libcurl error: 0 (No error)
+[2019.10.09-09.00.07:241][ 56]LogHttp: Warning: 000001FB44CFAE80: libcurl info message cache 0 (Found bundle for host datarouter.ol.epicgames.com: 0x1fb241f7f70 [can pipeline])
+[2019.10.09-09.00.07:241][ 56]LogHttp: Warning: 000001FB44CFAE80: libcurl info message cache 1 (Re-using existing connection! (#33) with host datarouter.ol.epicgames.com)
+[2019.10.09-09.00.07:241][ 56]LogHttp: Warning: 000001FB44CFAE80: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (34.232.229.224) port 443 (#33))
+[2019.10.09-09.00.07:241][ 56]LogHttp: Warning: 000001FB44CFAE80: libcurl info message cache 3 (We are completely uploaded and fine)
+[2019.10.09-09.00.07:241][ 56]LogHttp: Warning: 000001FB44CFAE80: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, Client hello (1):)
+[2019.10.09-09.00.07:242][ 56]LogHttp: Warning: 000001FB44CFAE80: libcurl info message cache 5 (Connection died, retrying a fresh connect)
+[2019.10.09-09.00.07:242][ 56]LogHttp: Warning: 000001FB44CFAE80: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2019.10.09-09.00.07:242][ 56]LogHttp: Warning: 000001FB44CFAE80: libcurl info message cache 7 (Closing connection 33)
+[2019.10.09-09.00.07:242][ 56]LogHttp: Warning: 000001FB44CFAE80: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, Client hello (1):)
+[2019.10.09-09.00.07:242][ 56]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BE630C242-498F-AACE-6FB9-C88EFCB0A53D%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.23.0-8386587%2B%2B%2BUE4%2BRelease-4.23&UserID=2cfdf9b54a5d0ba7d1b0dfa0f26a02ab%7C94b6133059dd439db8a3b2c1d6c74977%7C7a99eef1-b59a-4a99-83fc-5296cfc9909c&AppEnvironment=datacollector-binary&UploadType=eteventstream

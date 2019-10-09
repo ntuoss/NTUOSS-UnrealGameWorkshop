@@ -63,31 +63,31 @@ In a few words:
 
 ​	After you’ve finished downloading the UE4 Engine and signed in your Epic Games account, you’ll be directed to the following interface to create your very first project.
 
-​	![](Images/1.0 CreateProject.png)
+​	![](Images/1.0.CreateProject.png)
 
 First of all, we’re going to introduce the Blueprint Visual Scripting Language in the following sections, so make sure you choose Blueprint instead of C++ and choose “Third Person” under the tag.
 
-![](Images/1.0.a. ChooseScriptingLanguage.png)
+![](Images/1.0.a.ChooseScriptingLanguage.png)
 
 Next, we’re building a mobile game today, so choose the platform to be “Mobile/Tablet” and leave the other two options as they were.
 
-![](Images/1.0.b. ChooseOtherSettings.png)
+![](Images/1.0.b.ChooseOtherSettings.png)
 
 Finally, choose a location for your project and give your project a name and click Create Project, you’re now good to go!
 
-![](Images/1.0.c. CreateProject.png)
+![](Images/1.0.c.CreateProject.png)
 
 ## Task 2. UE4 Editor UI Overview
 
 After your computer has finished loading your project, your UE4 Editor should look something like this below:
 
-![](Images/2.0.a UIOverview.png)
+![](Images/2.0.a.UIOverview.png)
 
 It feels quite messy for the beginners I understand, so here I’ll do a brief introduction on the Editor’s User Interface you you have an idea on what do all these parts do. The details of the following elaboration can be found at 
 
 [Unreal]: https://docs.unrealengine.com/en-US/Engine/UI/LevelEditor/index.html	"Unreal"
 
-![](Images/2.0.b. InterfaceBreakdown.jpg)
+![](Images/2.0.b.InterfaceBreakdown.jpg)
 
 
 

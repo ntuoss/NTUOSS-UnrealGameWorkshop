@@ -85,7 +85,7 @@ After your computer has finished loading your project, your UE4 Editor should lo
 
 It feels quite messy for the beginners I understand, so here I’ll do a brief introduction on the Editor’s User Interface you you have an idea on what do all these parts do. The details of the following elaboration can be found at 
 
-[Unreal]: https://docs.unrealengine.com/en-US/Engine/UI/LevelEditor/index.html	"Unreal"
+[Unreal Documentation: Editor Interface](https://docs.unrealengine.com/en-US/Engine/UI/LevelEditor/index.html)
 
 ![](Images/2.0.b.InterfaceBreakdown.jpg)
 

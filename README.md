@@ -1,25 +1,31 @@
-# NTUOSS Unity Workshop
+# NTUOSS Unreal Engine 4 Workshop
 
 ##### *made with love by [Yong Hao](https://github.com/HORACEYOUNG) for NTU Open Source Society*
 
 *Leave a star if you like this~*
 
-![](Images/UnityTitleImage.png)
+![](Images/UnrealLogo.png)
 
 ---
 
 ### Workshop Details
 
-**When**: Friday, 12 Oct 2018. 6:30 PM - 8:30 PM.
+**When**: Friday, 1 Nov 2019. 6:30 PM - 8:30 PM.
 **Where**: LT1, NTU North Spine Plaza
 **Who**: NTU Open Source Society
 
 **Questions**: We will be hosting a Pigeon Hole Live for collecting questions regarding the workshop.
 
 Feedback & Error Reports: We will send out the link for collecting feedback as usual.
-​	For further discussion or cooperation please contact YO0001AO@e.ntu.edu.sg.
+​	
 
-***Disclaimer: This workshop is for educational purposes only. The artistic resources are retrieved from Nintendo Co., Ltd. and information regarding Unity concepts are retrieved from [Unity Manual](https://docs.unity3d.com/Manual/index.html). No prototype or outcome of any type is intended for commercial use.***
+For further discussion or cooperation please contact YO0001AO@e.ntu.edu.sg.
+
+***Disclaimer: This workshop is for educational purposes only. The artistic resources are retrieved from Nintendo Co., Ltd. and information regarding Unreal concepts are retrieved from [Unreal Document](https://docs.unrealengine.com/en-US/index.html). The idea and content of the workshop is inspired by***
+
+[Virtus Learning Hub]: https://www.virtushub.com/
+
+***No prototype or outcome of any type is intended for commercial use.***
 
 Tip: Search this Document with “UnityConcept: ‘Search Term’“ and “UnityDoc: ‘Search Term’” to look for explanation. (First Letter Capitalized)
 Eg. “UnityConcept: Asset” / “UnityDoc: GetKey”

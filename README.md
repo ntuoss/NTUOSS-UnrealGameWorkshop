@@ -145,7 +145,57 @@ It feels quite messy for the beginners I understand, so here I’ll do a brief i
 
 ---
 
-## Task 3. Introduction to Blueprint
+## Task 3. Introduction to Blueprint Visual Scripting
+
+### Task 3.1. Blueprint Overview
+
+The **Blueprints Visual Scripting** system in Unreal Engine is a complete gameplay scripting system based on the concept of using a node-based interface to create gameplay elements from within Unreal Editor. As with many common scripting languages, it is used to define object-oriented (OO) classes or objects in the engine. As you use UE4, you'll often find that objects defined using Blueprint are colloquially referred to as just "Blueprints."
+
+Let us take a look and have a intuitive concept about blueprint, navigating to ThirdPersonBP -> Blueprints -> ThirdPersonCharacter:
+
+![](Images/3.2.1.b.BlueprintOverview.png)
+
+
+
+This system is extremely flexible and powerful as it provides the ability for designers to use virtually the full range of concepts and tools generally only available to programmers. In addition, Blueprint-specific mark-up available in Unreal Engine's C++ implementation enables programmers to create baseline systems that can be extended by designers.
+
+The workflow of the blueprint scripting language can be visualized as below (adopted from [link](https://www.youtube.com/watch?v=MWepzQqAS60&list=PLL0cLF8gjBpqRUy7r0DtVY3Fcdgq5Wk-h&index=3)):
+
+![](Images/3.1.a.BlueprintWorkflow.png)
+
+The blueprint programming language is almost like the real spoken language, where you have a subject,  a verb, and an object, to describe a certain action that the subject has done to the object. While in blueprint, what we have is the structure in the image above, where when certain “events” happen, an action will be applied to an object. The subject here depends on the context to be either the system or the player.
+
+Now let’s look at the different categories of blueprints in the Unreal Engine.
+
+### Task 3.2. Categories of Blueprint
+
+#### 1. Level Blueprints
+
+The level blueprint contains the blueprint code to control the entire level. It can only reference the objects within the level and the effects of one level blueprint will not be carried along to the next level.
+
+Let us try out the level blueprint with a fairly simple example: we’re going to control a light in the scene, and after a few seconds, make it disappear.
+
+First of all, let us create a point light object by dragging it from the modes panel to the scene:
+
+![](Images/3.2.1.d.AddLight.png)
+
+Now open the level blueprint by navigating to Blueprints -> Open level blueprints:
+
+![](Images/3.2.1.c.OpenLevelBlurprints.png)
+
+To add components to the level blueprint, right click and add one “Event Begin Play”, one “Point Light” Reference and one “Toggle Visibility” to the game, and insert one “delay” between “Event Begin Play” and “Toggle Visibility”:
+
+![](Images/3.2.1.e.LevelBlueprint.png)
+
+
+
+#### 2. Class Blueprints
+
+Like we’ve mentioned earlier, blueprint is an object-oriented programming language, the class blueprint is designed for individual objects. Objects in game like player, enemies, items, buffs, or even health bars can all be written in the form of class blueprints. Class blueprints can be duplicated, which is extremely useful as you do not have to rewrite your code for objects that perform the same functions.
+
+### Task 3.3. 
+
+
 ## Task 4. Build the Game (May Involve Multiple Tasks)
 ## Task N. Export the Game
 ## Acknowledgements

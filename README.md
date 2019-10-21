@@ -169,7 +169,7 @@ Now let’s look at the different categories of blueprints in the Unreal Engine.
 
 ### Task 3.2. Categories of Blueprint
 
-#### 1. Level Blueprints
+#### 3.2.1. Level Blueprints
 
 The level blueprint contains the blueprint code to control the entire level. It can only reference the objects within the level and the effects of one level blueprint will not be carried along to the next level.
 
@@ -189,11 +189,81 @@ To add components to the level blueprint, right click and add one “Event Begin
 
 
 
-#### 2. Class Blueprints
+#### 3.2.2. Class Blueprints
 
 Like we’ve mentioned earlier, blueprint is an object-oriented programming language, the class blueprint is designed for individual objects. Objects in game like player, enemies, items, buffs, or even health bars can all be written in the form of class blueprints. Class blueprints can be duplicated, which is extremely useful as you do not have to rewrite your code for objects that perform the same functions.
 
-### Task 3.3. 
+Let’s try an example by making multiple lights that will be turned off once your character touched them.
+
+Navigate to the folder “ThirdPersonBP”, right click and under blueprint tab select “Blueprint Class”, you’ll be having something as shown below:
+
+![](Images/3.2.2.BPClass.png)
+
+![](Images/3.2.2.SelectBPClass.png)
+
+Here we select actor as it’s the most common template for blueprint class. We will name it light setup, and you will see something as below:
+
+![](Images/3.2.2.WhiteBall.png)
+
+This is the default template of the blueprint class, the white ball in the centre represents the origin of the object. We now add a point light by click “Add Component” by clicking on the button on the top left side of the screen, then add a static mesh component and select the material called “SM_Lamp_Wall”:
+
+![](Images/3.2.2.AddComponent.png)
+
+![](Images/3.2.2.Lamp.png)
+
+Then add a box collision component to the light, this is to detect if the player has contacted the lamp for actions to happen:
+
+![](Images/3.2.2.BoxCollider.png)
+
+Then navigate to the event graph and write blueprint as below:
+
+![](Images/3.2.2.LightBP.png)
+
+This basically means any object that get in touch with the box collision of the point light, it will be first casted to the ThirdPersonCharacter class, and if successful, the designated event will happen, in this case “Toggle Visibility”. Now get back to the game and we will notice the light will be toggled once the player get close to the point light:
+
+![](Images/3.2.2.ToggleLight.png)
+
+
+
+#### 3.3.3. Variables and Loops in Blueprint
+
+##### 3.3.3.1. Variables
+
+Like any other programming language, blueprint has several generic variable types to play with, as the list below:
+
+![](Images/3.3.3.VariableType.png)
+
+You might has already noticed the types that are familiar to you, like Boolean integer and float. Some other important ones and their descriptions are listed below:
+
+Vector: composed three floating point numbers in the form of (x,y,z)
+
+Rotator: contains the rotation information of the object
+
+Transform: contains the information of position, rotation, and scale.
+
+To view the content of the variables, simply adopt the blueprint below:
+
+![](Images/3.3.3.PrintVar.png)
+
+##### 3.3.3.2. Branches and Conditions
+
+Branches are very much like the if statements in general programming language, it has different output depending on different input true or false values, like below:
+
+![](Images/3.3.3.2.Branch.png)
+
+##### 3.3.3.3. Loops
+
+Again Very much like for and while loops in general programming language.
+
+###### 3.3.3.3.1. For Loop
+
+![](Images/3.3.3.3.1.Forloop.png)
+
+It will execute the loop body for (Last Index - First Index + 1) Times. You can manage the index from the index node like what we did, to print out the index for every loop it takes.
+
+###### 3.3.3.3.2. While Loop
+
+![](Images/3.3.3.3.2.WhileLoop.png)
 
 
 ## Task 4. Build the Game (May Involve Multiple Tasks)

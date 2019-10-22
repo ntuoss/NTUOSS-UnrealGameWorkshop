@@ -266,8 +266,87 @@ It will execute the loop body for (Last Index - First Index + 1) Times. You can 
 ![](Images/3.3.3.3.2.WhileLoop.png)
 
 
-## Task 4. Build the Game (May Involve Multiple Tasks)
+## Task 4. Build the Game
+In this workshop we’re going to create an endless runner game, like the Temple Run and the Subway Run, using blueprints and Unreal 4 Engine.
+
+### Task 4.1. Create the Project and adjust the camera
+
+We’ve already covered how to create a project in the previous sectors. The only difference of our current project is we’re going to build a mobile game, so switch from desktop/console to mobile/tablet and the rest is pretty much the same.
+
+![](Images/4.1.CreateProject.png)
+
+In an endless running game, you’ll notice that the camera does not move throughout the game, let’s adjust the camera right now. Navigate to ThirdPerson - > ThirdPersonBP -> and open ThridPerson Character:
+
+![](Images/4.1.BP.png)
+
+In Viewport, click on the camera icon and move it a little up and behind to your like, and bring the head down a little bit to make it look down to the character:
+
+![](Images/4.1.Camera.png)
+
+Switch to event graph, and delete the Gamepad Section as we do not want the camera to move:
+
+![](Images/4.1.delete.png)
+
+Move to the Movement Input, change “InputAxis MoveForward” to “Event Tick” as we want our character to move endlessly:
+
+![](Images/4.1.EventTick.png)
+
+### Task 4.2. Set Up the floor Tile
+
+The material of the floor tiles can be found at the folder named “EndlessAssets”
+
+Create a folder named “EndlessFiles”, then create a folder under it called “Tiles”. We’re going to organize all the files under “EndlessFiles” folder:
+
+![](Images/4.2.EndlessFiles.png)
+
+Then drag and drop three files to import them to the engine, namely “FloorTile_Diff.png”, “FloorTile_EM.png”, and “FloorTile_Nrm.png”.
+
+![](Images/4.2.ImportTiles.png)
+
+Right click “FloorTile_Diff”, and click “Create Material”:
+
+![](Images/4.2.Create Material.png)
+
+Create Three Texture Sample and assign the three files to them. Connect them to the material as below:
+
+![](Images/4.2.Tile Material.png)
+
+Then in create a blueprint folder and under it, create a blueprint class called “MaterTile”, add a static mesh component and assign the material we’ve created to it:
+
+![](Images/4.2.Cube.png)
+
+Scale the cube to (10, 10, 0.1) to make it plane-like. Then add an arrow component to indicate the direction where we want our tile to expand:
+
+![](Images/4.2.Arrow.png)
+
+### Task 4.3. Endlessly Spawning the Tile
+
+Create a box collision at the edge of the tile. Whenever the play collides with it, a new tile will be spawned:
+
+![](Images/4.3.TileBox.png)
+
+Trigger the event by “On Component Begin Overlap”:
+
+![](Images/4.3.StepOne.png)
+
+Write a function to spawn tiles in the game mode blueprint:
+
+![](Images/4.3.SpawnTile.png)
+
+Back to the MasterTile Blueprint:
+
+![](Images/4.3.SpawnBlueprint.png)
+
+Create a new level and run a for loop, we can see our character running in the endlessly spawning tiles:
+
+![](Images/4.3.TenTikes.png)
+
+![](Images/4.3.PlayerOnTile.png)
+
+
+
 ## Task N. Export the Game
+
 ## Acknowledgements
 
 Many thanks to NTUOSS and its supportive committee~

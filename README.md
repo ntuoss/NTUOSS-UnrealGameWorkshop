@@ -307,11 +307,11 @@ Then drag and drop three files to import them to the engine, namely “FloorTile
 
 Right click “FloorTile_Diff”, and click “Create Material”:
 
-![](Images/4.2.Create Material.png)
+![](Images/4.2.CreateMaterial.png)
 
 Create Three Texture Sample and assign the three files to them. Connect them to the material as below:
 
-![](Images/4.2.Tile Material.png)
+![](Images/4.2.TileMaterial.png)
 
 Then in create a blueprint folder and under it, create a blueprint class called “MaterTile”, add a static mesh component and assign the material we’ve created to it:
 
@@ -407,7 +407,7 @@ In ThirdPersonGameMode, add a variable called “Total Coins”. That’s where 
 
 Then when the player hits the coin, destroy it and play a sound:
 
-![](Images/4.7.Destroy Coin.png)
+![](Images/4.7.DestroyCoin.png)
 
 Spawn the coin back in the tile blueprint:
 

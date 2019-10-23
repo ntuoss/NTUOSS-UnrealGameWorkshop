@@ -28,10 +28,12 @@ For further discussion or cooperation please contact YO0001AO@e.ntu.edu.sg.
 ---
 ### Prerequisites
 
-1. **Unreal Engine 4 Software (as UE4 in upcoming texts)**
+1. **Download Unreal Engine 4 Software(as UE4 in upcoming texts) and the GitHub ropo for the workshop**
 
    [You can download UE4 by clicking this link.](https://www.unrealengine.com/en-US/download)
 
+   [You can download the GitHub Repo by clicking this link.]( https://github.com/ntuoss/NTUOSS-UnrealGameWorkshop )
+   
    **Warning: We highly recommend you to download UE4 prior to coming to this workshop as it may take 30 - 60 minutes to complete the download. Meanwhile do remember to register an Epic Games account as you may be required to do so.**
 
 
@@ -343,9 +345,103 @@ Create a new level and run a for loop, we can see our character running in the e
 
 ![](Images/4.3.PlayerOnTile.png)
 
+And to destroy the tiles after we’ve run past it, simply add a destroy actor node after spawning the tile.
 
+### Task 4.4. Switching Lanes
 
-## Task N. Export the Game
+To move the player character to the exact centre of each lanes, we need to indicate where the centre of the lanes are by adding arrows to it:
+
+![](Images/4.4.LaneArrow.png)
+
+Now navigate to ThirdPersonCharacter blueprint and create a few variables:
+
+![](Images/4.4.New Variable.png)
+
+where lane is the current lane, new lane is the one that the player is gonna move to, and Lane Y is an array to hole the world location of the centres of each lane.
+
+Then build the blueprint as below:
+
+![](Images/4.4.SwitchLanes.png)
+
+In side Lerp Timeline, create a float track with two key frames, length 0.1 and value from 0 to 1:
+
+![](Images/4.4.LerpTimeline.png)
+
+### Task 4.5. Pipe Obstacle
+
+Move the mesh called “Low_Obstacles_Pipes.fbx” to a new folder called mesh, and remember to tick “Combine All Meshes”:
+
+![](Images/4.5.MoveMesh.png)
+
+Open up the PipeMain Material and adjust it as following:
+
+![](Images/4.5.PipeMat.png)
+
+Create a blueprint class and assign the material we’ve just adjusted:
+
+Randomly spawn pipes on lanes. Repeat 3 times for all lanes:
+
+![](Images/4.5.SpawnPipe.png)
+
+### Task 4.6. Box Obstacles
+
+Move “box.fbx” and “Crate_Diffuse.png” to the folder and modify the material as below:
+
+![](Images/4.5.BoxMaterial.png)
+
+Then modify the spawning pipes blueprint a little bit to spawn the boxes as well:
+
+![](Images/4.6.SpawnBox.png)
+
+### Task 4.7. Pickup Coins
+
+Drag “pickup_kineticEnergy.fbx” to the mesh folder and modify it like this:
+
+![](Images/4.7.CoinMat.png)
+
+Create the blueprint class out of the material modified.
+
+In ThirdPersonGameMode, add a variable called “Total Coins”. That’s where we’re gonna store how many coins we’ve picked up:
+
+![](Images/4.7.TotalCoins.png)
+
+Then when the player hits the coin, destroy it and play a sound:
+
+![](Images/4.7.Destroy Coin.png)
+
+Spawn the coin back in the tile blueprint:
+
+![](Images/4.7.SpawnCoin.png)
+
+### Task 4.8. Scoring
+
+Create a widget blueprint to display the scores:
+
+![](Images/4.8.Widget.png)
+
+Create a textbox at the right hand corner of the screen:
+
+![](Images/4.8.TextBox.png)
+
+Then navigate the the ThirdPersonGameMode to create a variable to increment the scores:
+
+![](Images/4.8.Scores.png)
+
+Modify the tile spawn blueprint so that 25 are added to the score whenever a tile is spawned, and a plus 50 are added when a coin is picked up
+
+### Task 4.9. Death
+
+Create Ragdoll:
+
+![](Images/4.9.CreateRagDoll.png)
+
+In ThirdPersonCharacter, write a function to disable the movement of the character:
+
+![](Images/4.9.DeathFunction.png)
+
+Remember to set the mesh “BlockAllDynamic”
+
+Fire off the Death Event whenever the player collides with a pipe or a box
 
 ## Acknowledgements
 
